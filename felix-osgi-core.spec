@@ -3,7 +3,7 @@
 
 Name:    felix-osgi-core
 Version: 1.4.0
-Release: 14.0%{?dist}
+Release: 14.1%{?dist}
 Summary: Felix OSGi R4 Core Bundle
 
 License: ASL 2.0
