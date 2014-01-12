@@ -1,3 +1,2 @@
 sources:
-  "felix-osgi-core-1.4.0-build.xml.tar.gz:"	79b281455da2578fde63b7c286ffcd0a7255ed79
-  "org.osgi.core-1.4.0-project.tar.gz:"	b2ee39cd33bc669cb3a866bdc2cf4dfe881d4170
+  org.osgi.core-1.4.0-project.tar.gz: b2ee39cd33bc669cb3a866bdc2cf4dfe881d4170
