@@ -16,6 +16,7 @@ Source0:        http://www.apache.org/dist/felix/%{bundle}-%{version}-project.ta
 BuildRequires:  maven-local
 BuildRequires:  mvn(org.apache.felix:felix-parent:pom:)
 BuildRequires:  mvn(org.apache.felix:maven-bundle-plugin)
+BuildRequires:  mvn(org.mockito:mockito-all)
 
 %description
 OSGi Service Platform Release 4 Core Interfaces and Classes.
