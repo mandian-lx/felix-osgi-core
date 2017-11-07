@@ -1,31 +1,26 @@
 %{?_javapackages_macros:%_javapackages_macros}
+
 %global bundle org.osgi.core
 
-Name:    felix-osgi-core
-Version: 1.4.0
-Release: 14.1%{?dist}
-Summary: Felix OSGi R4 Core Bundle
+Name:           felix-osgi-core
+Version:        1.4.0
+Release:        22.1
+Summary:        Felix OSGi R4 Core Bundle
+License:        ASL 2.0
+Group:          Development/Java
+URL:            http://felix.apache.org/site/apache-felix-osgi-core.html
+BuildArch:      noarch
 
-License: ASL 2.0
-URL:     http://felix.apache.org/site/apache-felix-osgi-core.html
-Source0: http://www.apache.org/dist/felix/%{bundle}-%{version}-project.tar.gz
+Source0:        http://www.apache.org/dist/felix/%{bundle}-%{version}-project.tar.gz
 
-BuildArch: noarch
-
-BuildRequires: java-devel
-BuildRequires: jpackage-utils
-BuildRequires: maven-local
-BuildRequires: felix-parent
-BuildRequires: maven-surefire-provider-junit4
-BuildRequires: mockito
-
-Requires: java
+BuildRequires:  maven-local
+BuildRequires:  mvn(org.apache.felix:felix-parent:pom:)
+BuildRequires:  mvn(org.apache.felix:maven-bundle-plugin)
 
 %description
 OSGi Service Platform Release 4 Core Interfaces and Classes.
 
 %package javadoc
-
 Summary:        API documentation for %{name}
 
 %description javadoc
@@ -51,6 +46,31 @@ export LC_ALL=en_US.UTF-8
 %doc LICENSE NOTICE
 
 %changelog
+* Wed Jul 26 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.4.0-22
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
+* Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.4.0-21
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
+* Thu Jun 16 2016 Mikolaj Izdebski <mizdebsk@redhat.com> - 1.4.0-20
+- Regenerate build-requires
+- Update to current packaging guidelines
+
+* Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.4.0-19
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
+* Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.4.0-18
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.4.0-17
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
+* Mon May 26 2014 Mikolaj Izdebski <mizdebsk@redhat.com> - 1.4.0-16
+- Remove BuildRequires on maven-surefire-provider-junit4
+
+* Tue Mar 04 2014 Stanislav Ochotnicky <sochotnicky@redhat.com> - 1.4.0-15
+- Use Requires: java-headless rebuild (#1067528)
+
 * Mon Aug 05 2013 Mat Booth <fedora@matbooth.co.uk> - 1.4.0-14
 - Update for latest guidelines
 
